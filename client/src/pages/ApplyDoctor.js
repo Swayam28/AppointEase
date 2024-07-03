@@ -17,7 +17,7 @@ function ApplyDoctor() {
     try {
       dispatch(showLoading());
       const response = await axios.post(
-        "https://health-e-visit.onrender.com/api/user/apply-doctor-account",
+        "https://appointease-m9wr.onrender.com/api/user/apply-doctor-account",
         {
           ...values,
           userId: user._id,
