@@ -13,7 +13,6 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "start": "node server.js"
-   
   },
   "author": "Swayam",
   "license": "ISC",
@@ -24,6 +23,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "http": "^0.0.1-security",
     "jsonwebtoken": "^9.0.0",
     "moment": "^2.29.4",
     "mongoose": "^7.2.1",
