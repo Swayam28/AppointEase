@@ -3,8 +3,9 @@ import axios from "axios";
 import Layout from "../components/Layout";
 import { Col, Row } from "antd";
 import Doctor from "../components/Doctor";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { showLoading, hideLoading } from "../redux/alertsSlice";
+import { get } from "express/lib/response";
 function Home() {
   const [doctors, setDoctors] = useState([]);
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ function Home() {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [getData]);
   return (
     <Layout>
       <Row gutter={20}>

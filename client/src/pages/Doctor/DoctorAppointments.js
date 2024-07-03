@@ -108,7 +108,7 @@ function DoctorAppointments() {
   ];
   useEffect(() => {
     getAppointmentsData();
-  }, []);
+  }, [getAppointmentsData]);
   return (
     <Layout>
       <h1 className="page-header">Appointments</h1>

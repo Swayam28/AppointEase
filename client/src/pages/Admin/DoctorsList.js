@@ -6,6 +6,7 @@ import {toast} from 'react-hot-toast'
 import axios from "axios";
 import { Table } from "antd";
 import moment from "moment";
+import { get } from "express/lib/response";
 
 function DoctorsList() {
   const [doctors, setDoctors] = useState([]);
@@ -51,7 +52,7 @@ function DoctorsList() {
   };
   useEffect(() => {
     getDoctorsData();
-  }, []);
+  }, [getDoctorsData]);
   const columns = [
     {
       title: "Name",

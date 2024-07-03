@@ -1,4 +1,4 @@
-import { Button, Col, Form, Input, Row, TimePicker } from "antd";
+
 import React, { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,6 +8,7 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import DoctorForm from "../../components/DoctorForm";
 import moment from "moment";
+import { get } from "express/lib/response";
 
 function Profile() {
   const { user } = useSelector((state) => state.user);
@@ -74,7 +75,7 @@ function Profile() {
 
   useEffect(() => {
     getDoctorData();
-  }, []);
+  }, [getDoctorData]);
   return (
     <Layout>
       <h1 className="page-title">Doctor Profile</h1>

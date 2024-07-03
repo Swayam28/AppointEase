@@ -5,6 +5,7 @@ import { showLoading, hideLoading } from "../../redux/alertsSlice";
 import axios from "axios";
 import { Table } from "antd";
 import moment from "moment";
+import { get } from "express/lib/response";
 
 function Userslist() {
   const [users, setUsers] = useState([]);
@@ -28,7 +29,7 @@ function Userslist() {
 
   useEffect(() => {
     getUsersData();
-  }, []);
+  }, [getUsersData]);
 
   const columns = [
     {
