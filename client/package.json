@@ -10,6 +10,7 @@
     "antd": "^5.5.1",
     "axios": "^1.4.0",
     "caniuse-lite": "^1.0.30001640",
+    "express": "^4.19.2",
     "http": "^0.0.1-security",
     "moment": "^2.29.4",
     "react": "^18.2.0",
